@@ -1,0 +1,19 @@
+{
+  "name": "snake-plus-plus-game-core",
+  "version": "0.1.0",
+  "description": "Core snake++ entities, following clean architecture pattern.",
+  "main": "index.js",
+  "repository": "git@github.com:Tale152/snake-plus-plus-game-core.git",
+  "author": "Tale152 <alessandro.talmi@studio.unibo.it>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "jest": "^28.0.3",
+    "ts-jest": "^28.0.1",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.4"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
