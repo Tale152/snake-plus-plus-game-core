@@ -1,12 +1,15 @@
 export default class Integer {
 
-    private constructor(private n: number){
-        if(Number.isNaN(n) || !Number.isInteger){
-            throw Error(n + " is not an Integer value")
-        }
+    private constructor(private n: number){}
+
+    static createZero(){
+        return new Integer(0)
     }
 
     static createInstance(v: number){
+        if(Number.isNaN(v) || !Number.isInteger){
+            throw Error(v + " is not an Integer value")
+        }
         return new Integer(v)
     }
 
@@ -15,19 +18,19 @@ export default class Integer {
     }
 
     sumWith(v: Integer): Integer {
-        return Integer.createInstance(this.n + v.value())
+        return new Integer(this.n + v.value())
     }
 
     subtract(v: Integer): Integer {
-        return Integer.createInstance(this.n - v.value())
+        return new Integer(this.n - v.value())
     }
 
     multiplyBy(v: Integer): Integer {
-        return Integer.createInstance(this.n * v.value())
+        return new Integer(this.n * v.value())
     }
 
     roundedDivisionBy(v: Integer): Integer {
-        return Integer.createInstance(Math.round(this.n / v.value()))
+        return new Integer(Math.round(this.n / v.value()))
     }
 
     divideBy(v: Integer): number{
@@ -36,11 +39,11 @@ export default class Integer {
 
     compareTo(v: Integer): Integer {
         if(this.n > v.value()){
-            return Integer.createInstance(1)
+            return new Integer(1)
         } else if (this.n < v.value()){
-            return Integer.createInstance(-1)
+            return new Integer(-1)
         } else {
-            return Integer.createInstance(0)
+            return Integer.createZero()
         }
     }
 
