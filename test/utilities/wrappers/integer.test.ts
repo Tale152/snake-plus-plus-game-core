@@ -26,7 +26,7 @@ it("should be comparable", () => {
     expect(z.compareTo(z).value()).toEqual(0)
 })
 
-it("should be convertable a to string containing its value", () => {
+it("should be convertable to string containing its value", () => {
     expect("value: " + x).toEqual("value: " + xValue)
 })
 
